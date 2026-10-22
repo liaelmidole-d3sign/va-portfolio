@@ -1,40 +1,412 @@
-:root{--cream:#f6eee8;--cream-soft:#f9f5f0;--ink:#171513;--brown:#704c3c;--brown-dark:#5b4035;--brown-mid:#9d7966;--white:#fff;--muted:#675951;--border:#e5d4c8;--ease:cubic-bezier(.22,.8,.26,1)}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:85px}body{margin:0;color:var(--ink);font:400 14px/1.6 Poppins,'Segoe UI',Arial,sans-serif;background:linear-gradient(112deg,#f7f3ee,#e1ccc1 90%);overflow-x:clip}a{text-decoration:none;color:inherit}button{font:inherit}img{display:block;max-width:100%}.page-width{width:min(1480px,calc(100% - 60px));margin-inline:auto}h1,h2,h3,p{margin-top:0}.skip-link{position:absolute;left:8px;top:-60px;z-index:100;padding:10px;background:#fff}.skip-link:focus{top:10px}
-.site-header{height:63px;background:rgba(255,251,247,.88);position:relative;z-index:30;border-bottom:1px solid rgba(132,102,84,.06);backdrop-filter:blur(15px)}.header-inner{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;padding-inline:35px}.brand{font-size:19px;line-height:1;font-weight:700;letter-spacing:-.04em;white-space:nowrap}.navigation{display:flex;align-items:center;gap:31px;margin-left:auto;margin-right:auto}.nav-link{font-size:12px;color:#41342d;position:relative;white-space:nowrap;padding:22px 0 19px}.nav-link:after{content:"";position:absolute;bottom:14px;left:0;width:100%;height:2px;background:var(--brown);transform:scaleX(0);transform-origin:left;transition:transform .2s}.nav-link:hover:after,.nav-link.active:after{transform:scaleX(1)}.nav-link.active{color:#111;font-weight:600}.nav-cta{background:var(--brown);border-radius:999px;color:#fff;font-size:11px;font-weight:600;padding:11px 19px;white-space:nowrap;transition:background .2s,transform .2s}.nav-cta span{font-size:16px;margin-left:7px}.nav-cta:hover{background:#503426;transform:translateY(-2px)}.menu-button{display:none;border:0;background:transparent;width:37px;height:38px;padding:9px;cursor:pointer}.menu-button span{display:block;height:2px;background:var(--brown);margin:5px 0;border-radius:5px}
-.showcase{position:relative;z-index:3;isolation:isolate}.hero{height:410px;position:relative;background:radial-gradient(ellipse at 56% 53%,#eddbd0 2%,transparent 48%),linear-gradient(102deg,#f9f3ee 4%,#efddd2 55%,#c5a899 100%)}.hero-inner{height:100%;display:flex;position:relative;z-index:1}.hero-blob{position:absolute;z-index:0;pointer-events:none;border-radius:100%;filter:blur(18px)}.blob-left{height:380px;width:290px;background:#f8f0e6;left:-175px;top:0}.blob-right{width:240px;height:350px;right:-110px;top:70px;background:#c9ae9c;opacity:.35}.hero-copy{padding:54px 0 0 39px;width:44%;position:relative;z-index:4}.eyebrow{font-size:11px;letter-spacing:.04em;color:#5e514a;display:flex;align-items:center;gap:11px;margin-bottom:14px}.eyebrow span{height:25px;width:25px;border:7px solid #fff;background:#b58e7b;display:inline-block;border-radius:50%}.hero-copy h1{font-size:clamp(43px,4.05vw,63px);letter-spacing:-.047em;line-height:1.05;font-weight:800;margin:0;white-space:nowrap}.hero-copy h1 em{font-style:normal;color:#79533f}.role{font-size:24px;line-height:1.4;color:#4c3328;font-weight:400;margin-bottom:10px}.hero-summary{font-size:15px;max-width:390px;line-height:1.62;color:#40332d;margin-bottom:16px}.hero-actions{display:flex;gap:13px;align-items:center;flex-wrap:wrap}.button{display:inline-flex;align-items:center;justify-content:center;gap:19px;border-radius:30px;border:1px solid var(--brown);font-size:12px;font-weight:500;min-height:44px;padding:0 24px;transition:background .2s,transform .2s,color .2s;white-space:nowrap}.button span{font-size:17px}.button:hover{transform:translateY(-2px)}.button-solid{background:var(--brown);color:#fff}.button-solid:hover{background:#593a2d}.button-outline{background:rgba(255,255,255,.22);color:#34231e}.button-outline:hover{background:#fff}.button-small{min-height:40px;padding-inline:22px;font-size:11px;margin-top:9px}.support-highlights{display:flex;align-items:center;gap:28px;margin-top:23px}.support-highlight{display:flex;gap:8px;align-items:center;min-width:0}.support-icon{width:33px;height:33px;flex:0 0 33px;border-radius:50%;background:#fff;display:grid;place-items:center;color:#805d4c;font-size:19px}.support-highlight b,.support-highlight small{display:block;white-space:nowrap}.support-highlight b{font-size:10px;line-height:1.4;font-weight:600}.support-highlight small{font-size:9px;color:#958275;margin-top:2px}.hero-right{position:absolute;inset:0 0 0 60%;pointer-events:none}.faded-portrait{position:absolute;height:410px;width:330px;object-fit:cover;object-position:50% 7%;right:-6px;top:0;opacity:.10;filter:sepia(.4) grayscale(.3);mask-image:linear-gradient(90deg,transparent,black 45%),linear-gradient(0deg,transparent,black 35%);mask-composite:intersect}.qualities{position:absolute;top:36px;left:4%;font-size:17px;line-height:1.9;color:#4b322a;font-style:italic;transform:rotate(2deg)}.stat-card{position:absolute;right:11%;top:119px;width:198px;border-radius:17px;padding:16px 18px;background:rgba(134,98,81,.42);color:#fff;box-shadow:0 20px 50px #4b302b12;backdrop-filter:blur(8px)}.stat-card>div{display:flex;align-items:center;gap:12px;margin-bottom:11px}.stat-card>div:last-child{margin-bottom:0}.stat-card p{margin:0}.stat-icon{font-size:24px;width:33px;text-align:center;line-height:1}.stat-card b,.stat-card small{display:block;line-height:1.3}.stat-card b{font-size:11px;font-weight:600}.stat-card small{font-size:9px;color:#fff7f3;margin-top:3px}.speech-bubble{background:#fff;border:2px solid #d0aa95;border-radius:50% / 45%;box-shadow:0 7px 22px #6f4b3112;text-align:center;color:#201815;line-height:1.43;font-size:12px}.bubble-right{position:absolute;top:155px;left:0;width:159px;padding:18px 17px;transform:rotate(-7deg);border-width:2px}.bubble-right:after{content:"";position:absolute;width:13px;height:13px;background:#fff;border-right:2px solid #d0aa95;border-bottom:2px solid #d0aa95;left:45%;bottom:-8px;transform:rotate(45deg)}
-.center-character{position:absolute;z-index:8;left:50%;top:-42px;transform:translateX(-49%);pointer-events:none;height:745px}.standing-person{height:100%;width:auto;max-width:none;filter:drop-shadow(0 8px 10px rgba(67,41,25,.12))}.bubble-intro{position:absolute;z-index:9;top:3px;left:calc(50% - 248px);width:189px;min-height:115px;padding:16px 15px 12px;transform:rotate(-9deg);border-radius:47% 52% 46% 53%}.bubble-intro strong{display:block;font-size:18px;line-height:1.3;margin-bottom:6px}.bubble-intro span{display:block;font-size:12px}.bubble-intro:after{content:"";position:absolute;right:0;bottom:-13px;width:22px;height:17px;border-radius:0 0 100% 0;border-right:2px solid #d0aa95;border-bottom:2px solid #d0aa95;transform:rotate(-30deg)}.curl{position:absolute;z-index:7;color:#a6775e;font-size:55px;font-family:Georgia,serif;line-height:1;pointer-events:none}.curl-one{top:131px;left:calc(50% - 212px);transform:rotate(90deg)}.curl-two{right:29%;top:279px;transform:rotate(35deg)}.little-lines{position:absolute;z-index:7;left:43%;top:347px;font-size:22px;color:#fff}
-.intro-panel{position:relative;z-index:3;min-height:229px;background:rgba(255,255,255,.98);display:grid;grid-template-columns:34% 20% 46%;border-radius:25px;box-shadow:0 22px 55px rgba(82,49,32,.12);margin-top:-8px;padding:24px 24px 23px 50px;overflow:visible}.intro-panel h2{font-weight:700;font-size:29px;line-height:1.1;letter-spacing:-.028em;margin-bottom:10px}.intro-panel h2 em{font-style:normal;color:#a57a67}.about-content{position:relative;z-index:4}.about-content p{font-size:12px;line-height:1.55;color:#63534c;max-width:395px;margin-bottom:8px}.pointing-zone{position:relative;height:207px;align-self:end;z-index:5;pointer-events:none}.pointing-zone>img{position:absolute;height:288px;width:auto;max-width:none;right:-45px;bottom:-79px;filter:drop-shadow(0 6px 5px rgba(62,40,35,.1))}.bubble-pointing{position:absolute;width:112px;font-size:10px;padding:10px 11px;top:-5px;right:-12px;border:1.5px solid #ceaa95;transform:rotate(7deg)}.pointing-curl{position:absolute;right:13px;top:43px;font-size:40px;color:#ab826d}.services-content{position:relative;z-index:10;padding-left:20px}.services-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.service-card{border:1px solid #f1e9e5;text-align:left;background:#fff;border-radius:15px;min-height:116px;padding:14px 12px 11px;box-shadow:0 8px 19px rgba(90,59,43,.1);display:flex;flex-direction:column;cursor:pointer;transition:transform .2s var(--ease),box-shadow .2s;border-top-color:#fbf9f7}.service-card:hover,.service-card:focus-visible{transform:translateY(-5px);box-shadow:0 12px 25px rgba(90,59,43,.17);outline:none;border-color:#c49f8a}.service-icon{display:block;color:#855c49;font-size:22px;line-height:1;margin-bottom:11px}.service-card strong{display:block;font-size:10.5px;line-height:1.32;font-weight:700;margin-bottom:3px}.service-card>span:last-child{font-size:9.5px;line-height:1.38;color:#5a534d}
-.details-panel{position:relative;z-index:1;border-radius:25px 25px 23px 23px;margin-top:0;display:grid;grid-template-columns:41% 29% 30%;background:radial-gradient(ellipse at 55% 103%,#9b7a68 0%,transparent 35%),linear-gradient(135deg,#684737,#5b4035 80%);color:#fff;padding:24px 36px 42px 60px;min-height:478px;box-shadow:0 25px 40px rgba(77,51,38,.1)}.details-panel h2{font-size:23px;font-weight:700;letter-spacing:-.02em;margin:0 0 10px}.experience-content{padding-right:25px}.timeline{border-left:1px solid rgba(255,237,225,.64);margin-left:3px;padding-left:18px;display:grid;gap:12px}.job{position:relative}.job:before{content:"";position:absolute;left:-22px;top:6px;width:7px;height:7px;border-radius:50%;background:#f3eee8;box-shadow:0 0 0 3px #a5806e}.job h3{font-size:10px;line-height:1.5;margin:0;font-weight:700}.job p{font-size:10px;line-height:1.45;color:#f0e1d8;max-width:440px;margin:0}.job .company{font-size:10px;color:#fff2ed;font-weight:500}.job .company span{font-weight:400}.job-date{opacity:.9;font-size:9px!important}.skills-content{position:relative;z-index:1;padding:62px 26px 0 0}.skills-list{margin:0;padding:0;list-style:none;display:grid;gap:11px}.skills-list li{font-size:10px;color:#fff5f0;line-height:1.2}.skills-list li i{display:block;width:94%;height:6px;background:linear-gradient(to right,#f4dbcc 78%,#a98b7b 78%);border-radius:20px;margin-top:8px;position:relative}.skills-list li:nth-child(2) i{width:88%;background:linear-gradient(to right,#f4dbcc 86%,#a98b7b 86%)}.skills-list li:nth-child(3) i{width:84%;background:linear-gradient(to right,#f4dbcc 73%,#a98b7b 73%)}.skills-list li:nth-child(4) i{width:77%;background:linear-gradient(to right,#f4dbcc 76%,#a98b7b 76%)}.skills-list li:nth-child(5) i{width:82%;background:linear-gradient(to right,#f4dbcc 80%,#a98b7b 80%)}.skills-list li:nth-child(6) i{width:80%;background:linear-gradient(to right,#f4dbcc 77%,#a98b7b 77%)}.skills-list li i:after{content:"";position:absolute;right:0;top:-2px;width:10px;height:10px;background:#f9ece3;border-radius:50%}.lower-speech{position:absolute;z-index:4;left:81%;top:36px;width:139px;padding:16px 10px;transform:rotate(-9deg);font-size:11px;box-shadow:none}.seated-person{position:absolute;z-index:3;width:290px;max-width:none;height:auto;right:-56px;bottom:-52px;filter:drop-shadow(0 8px 10px rgba(30,20,19,.13));pointer-events:none}.right-content{border-left:1px solid rgba(255,244,236,.3);padding-left:35px;position:relative;z-index:6}.right-block{margin-bottom:22px}.right-heading{display:flex;gap:15px;align-items:center;margin-bottom:7px}.right-heading>span{font-size:22px;background:#866653;display:grid;place-items:center;width:36px;height:36px;border-radius:50%;flex-shrink:0}.right-heading h2{font-size:21px;margin:0}.right-block p{font-size:10px;line-height:1.5;margin:0 0 2px 51px;color:#f9ece6}.right-block p.heavy{font-weight:700}.expertise-pills{display:flex;gap:7px;flex-wrap:wrap;margin-left:51px}.expertise-pills span{background:#fff;color:#6f4b3d;border-radius:10px;padding:8px 10px;font-size:9px;font-weight:600;box-shadow:0 3px 12px rgba(44,25,19,.08)}.contact-block a,.contact-block>p{display:block;color:#fff4ef;font-size:10px;margin:6px 0 0 51px}.contact-block a span,.contact-block p span{margin-right:9px;font-size:14px}.contact-block a:hover{text-decoration:underline}.contact-block .contact-button{display:inline-flex;background:#fff;border-radius:99px;color:#6f4b3d;margin-top:15px;padding:9px 17px;font-size:10px;font-weight:700;align-items:center;gap:10px;transition:transform .2s}.contact-button:hover{transform:translateY(-3px);text-decoration:none!important}
-.footer{display:flex;justify-content:space-between;align-items:center;gap:15px;font-size:10px;color:#5f4c45;padding:20px 18px 25px}.footer a:hover{text-decoration:underline}
-/* desktop readable while preserving screenshot silhouette */
-@media (min-width:1580px){.hero{height:440px}.hero-copy{padding-top:67px}.intro-panel{min-height:245px}.center-character{height:788px}.details-panel{min-height:520px}.pointing-zone>img{height:311px}}
-@media (max-width:1280px) and (min-width:981px){.page-width{width:calc(100% - 34px)}.header-inner{padding-inline:15px}.navigation{gap:19px}.hero-copy{padding-left:25px;width:45%}.hero-copy h1{font-size:clamp(39px,4vw,52px)}.role{font-size:20px}.hero-summary{max-width:350px;font-size:13px}.support-highlights{gap:8px}.support-highlight b{font-size:9px}.support-highlight small{font-size:8px}.center-character{height:710px;left:52%}.bubble-intro{left:calc(52% - 240px)}.qualities{left:12%}.bubble-right{left:17%}.stat-card{right:2%;width:174px}.intro-panel{grid-template-columns:34% 19% 47%;padding-left:35px}.about-content p{font-size:11px}.services-content{padding-left:10px}.services-grid{gap:7px}.service-card{padding:12px 8px}.service-card strong{font-size:9px}.pointing-zone>img{height:250px;right:-47px}.details-panel{padding-left:35px;grid-template-columns:40% 30% 30%}.right-content{padding-left:18px}.seated-person{width:240px;right:-34px}.lower-speech{left:74%}.expertise-pills{margin-left:10px}}
-@media (max-width:980px){.page-width{width:calc(100% - 32px)}.header-inner{padding-inline:5px}.navigation{position:absolute;right:16px;left:16px;top:62px;background:#fff;border-radius:0 0 17px 17px;padding:18px;display:none;box-shadow:0 17px 23px #4d2d211c;z-index:40;flex-direction:column;align-items:stretch;gap:2px}.navigation.is-open{display:flex}.nav-link{padding:11px 15px;font-size:13px}.nav-link:after{display:none}.nav-link.active{background:#f9f0eb;border-radius:8px}.nav-cta{margin-left:auto}.menu-button{display:block;order:3}.hero{height:465px}.hero-copy{width:53%;padding-left:10px;padding-top:80px}.hero-copy h1{font-size:clamp(33px,4.2vw,51px)}.role{font-size:18px}.hero-summary{font-size:13px}.support-highlights{flex-wrap:wrap;gap:9px;margin-top:15px}.center-character{height:640px;left:67%;top:0}.bubble-intro{top:25px;left:calc(67% - 204px);width:160px;padding:13px}.bubble-intro strong{font-size:14px}.bubble-intro span{font-size:10px}.curl-one,.curl-two,.little-lines,.qualities,.bubble-right,.stat-card{display:none}.intro-panel{grid-template-columns:55% 45%;padding:26px;min-height:0}.about-content{grid-column:1}.pointing-zone{grid-column:2;grid-row:1;height:180px}.pointing-zone img{height:260px;right:18%;bottom:-28px}.bubble-pointing{right:3%;top:12px}.services-content{grid-column:1 / -1;grid-row:2;padding:20px 0 0}.services-grid{gap:10px}.details-panel{grid-template-columns:1fr 1fr;gap:27px;min-height:0}.experience-content{padding-right:0}.skills-content{padding:2px 0 260px}.seated-person{width:270px;bottom:-40px;right:-30px}.lower-speech{top:auto;bottom:180px;left:25%}.right-content{grid-column:1 / -1;display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;border-top:1px solid #ffffff44;border-left:0;padding:25px 0 0}.right-heading{gap:6px}.right-heading>span{width:29px;height:29px;font-size:18px}.right-heading h2{font-size:17px}.right-block p,.contact-block a,.contact-block>p{margin-left:0}.expertise-pills{margin-left:0}}
-@media (max-width:670px){.site-header{height:61px}.header-inner{gap:6px}.brand{font-size:17px;letter-spacing:-.05em}.nav-cta{font-size:9px;padding:8px 10px}.nav-cta span{font-size:13px;margin-left:2px}.menu-button{width:34px;padding-inline:6px}.navigation{top:61px}.page-width{width:calc(100% - 24px)}.showcase{overflow:visible}.hero{height:auto;padding-bottom:2px}.hero-inner{display:block}.hero-copy{width:100%;padding:39px 7px 0}.eyebrow{font-size:10px}.hero-copy h1{font-size:clamp(36px,10.3vw,59px)}.role{font-size:clamp(16px,4vw,22px)}.hero-summary{font-size:13px;max-width:450px}.hero-actions{gap:9px}.button{font-size:11px;padding-inline:17px;min-height:42px;gap:12px}.support-highlights{margin-top:15px;justify-content:space-between;flex-wrap:nowrap;gap:3px}.support-highlight{gap:3px}.support-icon{width:27px;height:27px;flex-basis:27px;font-size:16px}.support-highlight b{font-size:8.6px}.support-highlight small{font-size:7px}.hero-right{display:none}.center-character{position:relative;left:auto;top:auto;transform:none;height:430px;display:flex;justify-content:center;margin-top:-3px;overflow:hidden}.standing-person{height:520px;width:auto;transform:translateY(-5px)}.bubble-intro{top:auto;bottom:342px;left:2%;width:143px;min-height:0;padding:9px 11px;border-width:1.5px}.bubble-intro strong{font-size:13px}.bubble-intro span{font-size:9px}.bubble-intro:after{display:none}.intro-panel{margin-top:-22px;z-index:10;grid-template-columns:1fr;padding:24px 20px 19px;border-radius:20px}.intro-panel h2{font-size:27px}.about-content{grid-column:1;grid-row:1}.about-content p{max-width:470px;font-size:12px}.pointing-zone{height:176px;grid-column:1;grid-row:2;overflow:hidden}.pointing-zone img{height:255px;right:38%;bottom:-92px}.bubble-pointing{right:10%;top:36px}.services-content{grid-column:1;grid-row:3;padding:13px 0 0}.services-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.service-card{min-height:126px}.service-card strong{font-size:11px}.service-card>span:last-child{font-size:10px}.details-panel{display:flex;flex-direction:column;gap:27px;margin-top:16px;padding:28px 24px 32px;border-radius:20px}.details-panel h2{font-size:23px}.job h3,.job p,.job .company{font-size:11px}.job-date{font-size:10px!important}.timeline{gap:18px}.skills-content{padding:20px 0 280px;border-top:1px solid #ffffff33}.skills-list li{font-size:11px}.seated-person{width:280px;right:-6px;bottom:-39px}.lower-speech{bottom:235px;left:0;font-size:10px}.right-content{display:flex;flex-direction:column;gap:8px;padding-top:26px}.right-heading h2{font-size:21px}.right-block p,.contact-block a,.contact-block>p{font-size:12px}.expertise-pills{gap:7px}.expertise-pills span{font-size:10px;padding:8px 12px}.contact-block{margin-bottom:0}.footer{font-size:10px;align-items:flex-start;padding-inline:5px}}
-@media (max-width:390px){.brand{font-size:15px}.nav-cta{font-size:8px;padding:8px}.hero-copy h1{font-size:clamp(33px,10.2vw,42px)}.hero-copy{padding-top:31px}.support-highlight small{display:none}.support-highlight b{font-size:8px}.support-icon{width:25px;height:25px;flex-basis:25px}.center-character{height:375px}.standing-person{height:452px}.bubble-intro{bottom:302px;left:0;width:125px}.bubble-intro strong{font-size:11px}.bubble-intro span{font-size:8px}.intro-panel{padding:21px 16px}.service-card{padding:11px}.details-panel{padding:25px 19px}.seated-person{width:255px}.footer{font-size:9px}}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button,.service-card,.nav-cta,.contact-button{transition:none!important}}
-/* Final photo-positioning adjustments, based on the supplied composition. */
-.hero{overflow:hidden}
-.site-header{z-index:6}
-.showcase{z-index:8}
-.site-header.menu-open{z-index:50}
-.center-character{left:52%}
-.bubble-intro{left:calc(52% - 250px)}
-.pointing-zone>img{height:460px;right:112px;bottom:-194px;mask-image:linear-gradient(to bottom,#000 0%,#000 70%,transparent 93%)}
-.bubble-pointing{right:8px;top:0}
-@media (max-width:1280px) and (min-width:981px){.pointing-zone>img{height:400px;right:80px;bottom:-173px}}
-@media (max-width:980px){.pointing-zone>img{height:310px;right:15%;bottom:-97px;mask-image:linear-gradient(to bottom,#000 0%,#000 76%,transparent 98%)}.bubble-intro{left:calc(67% - 204px)}}
-@media (max-width:670px){.center-character{left:auto;height:490px;overflow:visible}.standing-person{height:490px;transform:none}.bubble-intro{top:316px;bottom:auto;left:1%;width:145px}.pointing-zone>img{height:310px;right:37%;bottom:-110px}.bubble-pointing{right:8%;top:38px}}
-@media (max-width:390px){.center-character{height:453px}.standing-person{height:453px}.bubble-intro{top:333px;bottom:auto;width:129px}.pointing-zone>img{height:290px}}
-.nav-gap{display:block;flex:0 0 105px;width:105px}
-.center-character{left:50%}
-.bubble-intro{left:calc(50% - 248px)}
-.pointing-zone>img{mask-image:linear-gradient(to bottom,#000 0%,#000 50%,transparent 70%)}
-.pointing-zone .bubble-pointing{display:none}
-.bubble-pointing-floating{position:absolute;z-index:12;top:400px;left:calc(50% - 145px);width:116px;min-height:65px;padding:9px 11px;border-width:1.5px;transform:rotate(7deg);font-size:10px;line-height:1.45}
-.bubble-pointing-floating:after{content:"";position:absolute;left:18px;bottom:-7px;width:12px;height:12px;transform:rotate(45deg);background:#fff;border-right:1.5px solid #ceaa95;border-bottom:1.5px solid #ceaa95}
-@media (max-width:1280px) and (min-width:981px){.nav-gap{flex-basis:25px;width:25px}.bubble-pointing-floating{left:calc(50% - 130px)}}
-@media (max-width:980px){.nav-gap{display:none}.bubble-pointing-floating{display:none}.pointing-zone .bubble-pointing{display:block}.pointing-zone>img{mask-image:linear-gradient(to bottom,#000 0%,#000 74%,transparent 98%)}}
-@media (min-width:671px) and (max-width:980px){.center-character{left:67%}}
-@media (max-width:670px){.center-character{left:auto;right:auto;transform:none}}
-@media (max-width:670px){.bubble-intro{left:12px;transform:rotate(-6deg)}}
+/* ==========================================================================
+   refinements.css — loads AFTER styles.css.
+   Fixes: tiny text, low contrast, icon rendering, overlaps, decorative clutter.
+   Rules that must differ per screen size carry their own media queries,
+   because this file overrides the breakpoints in styles.css.
+   ========================================================================== */
+
+
+/* ---------- Keyboard focus ---------- */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #704c3c;
+  outline-offset: 3px;
+}
+
+.details-panel a:focus-visible {
+  outline-color: #ffffff;
+}
+
+
+/* ---------- SVG icons (replace the unicode glyphs) ---------- */
+.icon {
+  width: 1em;
+  height: 1em;
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.support-icon .icon {
+  width: 18px;
+  height: 18px;
+}
+
+.stat-icon .icon {
+  width: 22px;
+  height: 22px;
+}
+
+.service-icon .icon {
+  width: 24px;
+  height: 24px;
+}
+
+.right-heading > span .icon {
+  width: 19px;
+  height: 19px;
+}
+
+.contact-block span .icon {
+  width: 15px;
+  height: 15px;
+  vertical-align: -3px;
+}
+
+
+/* ---------- Hero: readable text and contrast ---------- */
+.eyebrow {
+  font-size: 12px;
+}
+
+.hero-summary {
+  color: #3b2f29;
+}
+
+.support-highlight b {
+  font-size: 12px;
+}
+
+.support-highlight small {
+  font-size: 11px;
+  color: #6f5e53;
+}
+
+.stat-card {
+  width: 222px;
+  background: rgba(91, 64, 53, 0.9);
+}
+
+.stat-card b {
+  font-size: 13px;
+}
+
+.stat-card small {
+  font-size: 11px;
+  color: #f3e3da;
+}
+
+@media (max-width: 1280px) {
+  .stat-card {
+    width: 200px;
+  }
+}
+
+/* narrow desktops: keep the three highlights on one line */
+@media (min-width: 981px) and (max-width: 1100px) {
+  .support-highlight b {
+    font-size: 11px;
+  }
+
+  .support-highlight small {
+    font-size: 10px;
+  }
+}
+
+/* phones: let the highlights wrap instead of shrinking to 7px */
+@media (max-width: 670px) {
+  .support-highlights {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px 18px;
+  }
+
+  .support-highlight small {
+    display: none;
+  }
+
+  .support-highlight b {
+    font-size: 12px;
+  }
+}
+
+
+/* ---------- About + Services ---------- */
+.about-content p {
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 430px;
+}
+
+.service-card strong {
+  font-size: 13px;
+}
+
+.service-card > span:last-child {
+  font-size: 12px;
+}
+
+@media (min-width: 981px) and (max-width: 1280px) {
+  .service-card strong {
+    font-size: 12px;
+  }
+
+  .service-card > span:last-child {
+    font-size: 11px;
+  }
+}
+
+/* Pointing photo: fade out inside the white card instead of ghosting into the brown panel */
+.pointing-zone > img {
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 38%, transparent 58%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 38%, transparent 58%);
+}
+
+@media (max-width: 980px) {
+  .pointing-zone > img {
+    -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 55%, transparent 74%);
+    mask-image: linear-gradient(to bottom, #000 0%, #000 55%, transparent 74%);
+  }
+}
+
+@media (max-width: 670px) {
+  .pointing-zone > img {
+    -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 50%, transparent 64%);
+    mask-image: linear-gradient(to bottom, #000 0%, #000 50%, transparent 64%);
+  }
+}
+
+
+/* ---------- Brown panel: experience, skills, education, contact ---------- */
+.details-panel h2 {
+  font-size: 24px;
+}
+
+.timeline {
+  gap: 18px;
+}
+
+.job h3 {
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.job .company {
+  font-size: 13px;
+}
+
+.job p {
+  font-size: 13px;
+  line-height: 1.55;
+  max-width: 480px;
+}
+
+.job-date {
+  font-size: 12px !important;
+  opacity: 1;
+  color: #e6cfc2;
+}
+
+/* Skills: plain labels instead of decorative percentage bars */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skills-list li {
+  font-size: 13px;
+  line-height: 1.3;
+  padding: 7px 14px;
+  border: 1px solid rgba(255, 244, 236, 0.32);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Right column */
+.right-heading h2 {
+  font-size: 20px;
+}
+
+.right-block p {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.expertise-pills span {
+  font-size: 12px;
+  padding: 7px 12px;
+}
+
+.contact-block a,
+.contact-block > p {
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.contact-block .contact-button {
+  font-size: 12px;
+  padding: 11px 20px;
+}
+
+.footer {
+  font-size: 12px;
+}
+
+/* Desktop: seated photo sits below the skills, no overlap */
+@media (min-width: 981px) {
+  .details-panel {
+    min-height: 560px;
+  }
+
+  .skills-content {
+    padding: 0 26px 0 0;
+  }
+
+  .seated-person {
+    width: 250px;
+    right: -40px;
+    bottom: -52px;
+  }
+}
+
+/* Phones: larger body text in the brown panel */
+@media (max-width: 670px) {
+  .job h3 {
+    font-size: 15px;
+  }
+
+  .job p,
+  .job .company,
+  .right-block p,
+  .contact-block a,
+  .contact-block > p {
+    font-size: 14px;
+  }
+
+  .skills-list li {
+    font-size: 13px;
+  }
+}
+
+
+/* ==========================================================================
+   Round 2
+   ========================================================================== */
+
+/* ---------- Scale: the layout was composed for a ~1300px canvas, so on
+   bigger screens it looked zoomed out. Scale the whole composition up in
+   steps so the canvas always fills the screen at a readable size. ---------- */
+html {
+  scroll-padding-top: 100px;
+}
+
+@media (min-width: 1366px) {
+  body { zoom: 1.05; }
+}
+
+@media (min-width: 1440px) {
+  body { zoom: 1.1; }
+}
+
+@media (min-width: 1536px) {
+  body { zoom: 1.17; }
+}
+
+@media (min-width: 1680px) {
+  body { zoom: 1.28; }
+}
+
+@media (min-width: 1920px) {
+  body { zoom: 1.45; }
+}
+
+@media (min-width: 2200px) {
+  body { zoom: 1.65; }
+}
+
+@media (min-width: 2560px) {
+  body { zoom: 1.9; }
+}
+
+
+/* ---------- Phones: keep the three highlights on one row ---------- */
+@media (max-width: 670px) {
+  .support-highlights {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 4px;
+  }
+
+  .support-icon {
+    width: 22px;
+    height: 22px;
+    flex-basis: 22px;
+  }
+
+  .support-icon .icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .support-highlight b {
+    font-size: 10.5px;
+  }
+}
+
+@media (max-width: 360px) {
+  .support-icon {
+    display: none;
+  }
+}
+
+/* Phones and tablets: more room above the seated photo so the last skill is never covered */
+@media (max-width: 980px) {
+  .skills-content {
+    padding-bottom: 290px;
+  }
+}
+
+@media (max-width: 670px) {
+  .skills-content {
+    padding-bottom: 320px;
+  }
+}
+
+
+/* ---------- Desktop: keep the About text and hero highlights clear of the pointing photo ---------- */
+@media (min-width: 981px) {
+  .about-content p {
+    max-width: 300px;
+  }
+}
+
+@media (min-width: 1281px) {
+  .pointing-zone > img {
+    height: 440px;
+    bottom: -214px;
+    -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 36%, transparent 52%);
+    mask-image: linear-gradient(to bottom, #000 0%, #000 36%, transparent 52%);
+  }
+
+  .bubble-pointing-floating {
+    top: 428px;
+  }
+}
+
+@media (min-width: 981px) and (max-width: 1280px) {
+  .pointing-zone > img {
+    height: 370px;
+    bottom: -190px;
+    -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 36%, transparent 52%);
+    mask-image: linear-gradient(to bottom, #000 0%, #000 36%, transparent 52%);
+  }
+
+  .bubble-pointing-floating {
+    top: 430px;
+  }
+}
+
+
+/* ---------- Tablet: the intro bubble was covering the name; move it to the empty right side ---------- */
+@media (min-width: 671px) and (max-width: 980px) {
+  .bubble-intro {
+    left: auto;
+    right: 16px;
+    top: 36px;
+    transform: rotate(8deg);
+  }
+}
