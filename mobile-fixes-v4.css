@@ -116,6 +116,21 @@
     grid-area: 2 / 1;
     width: min(100%, 360px);
     justify-self: center;
+    grid-template-columns: min(44%, 136px) minmax(0, 1fr);
+    column-gap: 6px;
+  }
+
+  /* Anchor the changing bubble to the fingertip, not the full-body midpoint.
+     The photo sets the stage height; text changes keep the same bubble center. */
+  .pointing-zone .bubble-pointing {
+    position: absolute;
+    top: calc(17% + 6px);
+    right: 0;
+    bottom: auto;
+    left: auto;
+    width: calc(100% - min(44%, 136px) - 6px);
+    margin: 0;
+    transform: translateY(-50%);
   }
 
   .services-content {
