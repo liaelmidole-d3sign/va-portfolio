@@ -9,14 +9,27 @@
     document.querySelector('.site-header')?.classList.remove('menu-open');
   };
   menu?.addEventListener('click', () => {
+    if (!nav) return;
     const open = nav.classList.toggle('is-open');
     menu.setAttribute('aria-expanded', String(open));
     document.querySelector('.site-header')?.classList.toggle('menu-open', open);
     menu.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
   });
   nav?.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && nav?.classList.contains('is-open')) {
+      closeMenu();
+      menu?.focus();
+    }
+  });
   document.addEventListener('click', e => { if (nav && menu && !nav.contains(e.target) && !menu.contains(e.target)) closeMenu(); });
+  // Reset the dropdown after rotating a device or crossing the desktop breakpoint.
+  const compactNavigation = window.matchMedia('(max-width: 1100px)');
+  if (compactNavigation.addEventListener) {
+    compactNavigation.addEventListener('change', closeMenu);
+  } else {
+    compactNavigation.addListener(closeMenu);
+  }
 
   const speeches = [...document.querySelectorAll('[data-service-speech]')];
   const original = 'Here are the<br>services I can<br>help you with!';
