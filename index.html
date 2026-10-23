@@ -9,17 +9,23 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=3">
-  <link rel="stylesheet" href="refinements.css?v=3">
+  <link rel="stylesheet" href="styles.css?v=4">
+  <link rel="stylesheet" href="refinements.css?v=4">
+  <link rel="stylesheet" href="mobile-fixes-v4.css">
+  <meta name="portfolio-release" content="2026-10-23-mobile-v4">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23704c3c'/%3E%3Ctext x='16' y='23' font-size='20' font-family='Arial' font-weight='700' text-anchor='middle' fill='white'%3EL%3C/text%3E%3C/svg%3E">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Liafil Elmido | Virtual Assistant &amp; Customer Support">
   <meta property="og:description" content="Chat, email and phone support, refunds, billing and account assistance.">
-  <script src="script.js?v=3" defer></script>
+  <script src="script.js?v=4" defer></script>
 </head>
 <body>
   <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
     <defs>
+      <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M6 18 18 6M6 6h12v12"/></symbol>
+      <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
+      <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v13m-5-5 5 5 5-5M5 21h14"/></symbol>
+      <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 20V4m-6 6 6-6 6 6"/></symbol>
       <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.4A8 8 0 1 1 21 12z"/></symbol>
       <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
       <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
@@ -47,7 +53,7 @@
         <a href="#education" class="nav-link">Education</a>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
-      <a class="nav-cta" href="#contact">Let's Work Together <span aria-hidden="true">↗</span></a>
+      <a class="nav-cta" href="#contact">Let's Work Together <svg class="icon action-icon" width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"/></svg></a>
       <button id="menu-button" class="menu-button" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-navigation"><span></span><span></span><span></span></button>
     </div>
   </header>
@@ -62,8 +68,8 @@
             <p class="role">Customer Service Representative</p>
             <p class="hero-summary">I help businesses deliver excellent customer experiences through reliable, efficient, and professional support.</p>
             <div class="hero-actions">
-              <a class="button button-solid" href="#contact">Hire Me <span aria-hidden="true">→</span></a>
-              <a class="button button-outline" href="assets/Liafil-Elmido-Resume.pdf" download>Download Resume <span aria-hidden="true">↓</span></a>
+              <a class="button button-solid" href="#contact">Hire Me <svg class="icon action-icon" width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a>
+              <a class="button button-outline" href="assets/Liafil-Elmido-Resume.pdf" download>Download Resume <svg class="icon action-icon" width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-download"/></svg></a>
             </div>
             <div class="support-highlights" aria-label="Support specialties">
               <div class="support-highlight"><span class="support-icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg></span><div><b>Chat Support</b><small>Fast & Professional</small></div></div>
@@ -95,12 +101,11 @@
         <div class="about-content">
           <h2 id="about-heading">About <em>Me</em></h2>
           <p>I am a customer service representative experienced in managing customer concerns, resolving issues efficiently, and maintaining high-quality service in fast-paced environments.</p>
-          <a class="button button-solid button-small" href="#experience">Learn More <span aria-hidden="true">→</span></a>
+          <a class="button button-solid button-small" href="#experience">Learn More <svg class="icon action-icon" width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a>
         </div>
         <div class="pointing-zone" aria-label="Liafil points toward the services section">
           <img src="assets/liafil-pointing.png" width="604" height="1411" alt="Liafil in a navy suit, pointing towards the customer support services" loading="lazy">
           <div class="speech-bubble bubble-pointing" data-service-speech aria-live="polite">Here are the<br>services I can<br>help you with!</div>
-          <span class="pointing-curl" aria-hidden="true">↷</span>
         </div>
         <div id="services" class="services-content" aria-labelledby="services-heading">
           <h2 id="services-heading">My <em>Services</em></h2>
@@ -160,11 +165,12 @@
           <a href="tel:+639383679337"><span aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></span> +63 938 367 9337</a>
           <p><span aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></span> General Mariano Alvarez, Cavite</p>
           <a href="mailto:liaelmido.le@gmail.com"><span aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></span> liaelmido.le@gmail.com</a>
-          <a class="contact-button" href="mailto:liaelmido.le@gmail.com?subject=Virtual%20Assistant%20Opportunity">Let's Work Together <span aria-hidden="true">↗</span></a>
+          <a class="contact-button" href="mailto:liaelmido.le@gmail.com?subject=Virtual%20Assistant%20Opportunity">Let's Work Together <svg class="icon action-icon" width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"/></svg></a>
         </div>
       </div>
     </section>
   </main>
-  <footer class="footer page-width"><span>© <span id="year">2026</span> Liafil Elmido. All rights reserved.</span><a href="#home">Back to top ↑</a></footer>
+  <footer class="footer page-width"><span>© <span id="year">2026</span> Liafil Elmido. All rights reserved.</span><a href="#home">Back to top <svg class="icon action-icon" width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-arrow-up"/></svg></a></footer>
 </body>
 </html>
+
